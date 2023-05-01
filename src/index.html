@@ -179,28 +179,28 @@
     <!--Start Member Section -->
     <section class="py-10 bg-slate-800 px-3 md:px-1 lg:px-4" id="member">
       <div class="container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mx-auto">
-        <div>
+        <div class="headline">
           <div class="text-center hover:border border-emerald-700 rounded-md p-6 w-48 md:w-52 duration-75 mx-auto">
             <h3 class="text-emerald-600 text-4xl font-semibold">500+ M</h3>
             <span class="text-lg text-slate-200">Hacking Labs</span>
           </div>
         </div>
 
-        <div>
+        <div class="headline">
           <div class="text-center hover:border border-emerald-700 rounded-md p-6 w-48 md:w-52 duration-75 mx-auto">
             <h3 class="text-emerald-600 text-4xl font-semibold">500+ M</h3>
             <span class="text-lg text-slate-200">Hacking Labs</span>
           </div>
         </div>
 
-        <div>
+        <div class="headline">
           <div class="text-center hover:border border-emerald-700 rounded-md p-6 w-48 md:w-52 duration-75 mx-auto">
             <h3 class="text-emerald-600 text-4xl font-semibold">500+ M</h3>
             <span class="text-lg text-slate-200">Hacking Labs</span>
           </div>
         </div>
 
-        <div>
+        <div class="headline">
           <div class="text-center hover:border border-emerald-700 rounded-md p-6 w-48 md:w-52 duration-75 mx-auto">
             <h3 class="text-emerald-600 text-4xl font-semibold">500+ M</h3>
             <span class="text-lg text-slate-200">Hacking Labs</span>
@@ -224,7 +224,7 @@
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           <!--Start Card -->
           <div
-            class="bg-slate-700 rounded-lg shadow-md hover:rotate-2 duration-300"
+            class="bg-slate-700 rounded-lg shadow-md hover:rotate-2 duration-300 headline"
           >
             <img src="../assets/images/work-1.jpg" class="rounded-t-lg" />
 
@@ -240,7 +240,7 @@
 
           <!--Start Card -->
           <div
-            class="bg-slate-700 rounded-lg shadow-md hover:rotate-2 duration-300"
+            class="bg-slate-700 rounded-lg shadow-md hover:rotate-2 duration-300 headline"
           >
             <img src="../assets/images/work-2.jpg" class="rounded-t-lg" />
 
@@ -256,7 +256,7 @@
 
           <!--Start Card -->
           <div
-            class="bg-slate-700 rounded-lg shadow-md hover:rotate-2 duration-300"
+            class="bg-slate-700 rounded-lg shadow-md hover:rotate-2 duration-300 headline"
           >
             <img src="../assets/images/work-3.jpg" class="rounded-t-lg" />
 
@@ -272,7 +272,7 @@
 
           <!--Start Card -->
           <div
-            class="bg-slate-700 rounded-lg shadow-md hover:rotate-2 duration-300"
+            class="bg-slate-700 rounded-lg shadow-md hover:rotate-2 duration-300 headline"
           >
             <img src="../assets/images/work-4.jpg" class="rounded-t-lg" />
 
@@ -288,7 +288,7 @@
 
           <!--Start Card -->
           <div
-            class="bg-slate-700 rounded-lg shadow-md hover:rotate-2 duration-300"
+            class="bg-slate-700 rounded-lg shadow-md hover:rotate-2 duration-300 headline"
           >
             <img src="../assets/images/work-5.jpg" class="rounded-t-lg" />
 
@@ -304,7 +304,7 @@
 
           <!--Start Card -->
           <div
-            class="bg-slate-700 rounded-lg shadow-md hover:rotate-2 duration-300"
+            class="bg-slate-700 rounded-lg shadow-md hover:rotate-2 duration-300 headline"
           >
             <img src="../assets/images/work-6.jpg" class="rounded-t-lg" />
 
@@ -352,6 +352,9 @@
 
   <!-- npm install waypoints -->
   <script src="../node_modules/waypoints/lib/noframework.waypoints.min.js"></script>
+
+  <!-- npm install scrollreveal --save -->
+  <script src="../node_modules/scrollreveal/dist/scrollreveal.min.js"></script>
 
   <!-- Start Swiper -->
   <script>
@@ -459,4 +462,17 @@
     })
   </script>
   <!-- End Waypoint -->
+
+  <!-- Start Scrollreveal -->
+  <script>
+    ScrollReveal().reveal('.headline',{ 
+      delay: 300,
+      origin: 'bottom',
+      distance: '0px',
+      interval: 300,
+      scale: 0.85,
+      reset: true
+    });
+  </script>
+  <!-- End Scrollreveal -->
 </html>
