@@ -81,7 +81,10 @@
         </li>
       </ul>
 
-      <div class="flex justify-center items-center space-x-4">
+      <div class="flex justify-center items-center space-x-3">
+        <i class="fa-sharp fa-solid fa-magnifying-glass text-slate-200 dark:text-slate-800 text-xl"
+          onclick="openSearch()"></i>
+
         <!-- Darkmode -->
         <div class="scale-90">
           <button id="dark-switch" onclick="toggleTheme()"
@@ -335,8 +338,36 @@
   </section>
   <!-- End Footer Section -->
 
+  <!-- Start TopIcon -->
   <a class="fa-solid fa-circle-up fa-bounce text-4xl md:text-5xl text-emerald-700 fixed bottom-7 md:bottom-12 right-7 md:right-12 hidden"
     id="top-arrow" href="#top"></a>
+  <!-- End TopIcon  -->
+
+  <!-- Start searchLayout -->
+  <form
+    class="fixed -top-full z-50 bg-slate-800 bg-opacity-95 w-full h-screen px-8 md:px-16 lg:px-24 xl:px-32 py-64 duration-500"
+    id="searchLayout">
+
+    <i class="absolute top-5 right-5 fa-solid fa-xmark text-2xl text-slate-200" onclick="closeSearch()"></i>
+
+    <label for="default-search" class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Search</label>
+    <div class="relative">
+      <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+        <svg aria-hidden="true" class="w-5 h-5 text-gray-500 dark:text-gray-400" fill="none" stroke="currentColor"
+          viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+        </svg>
+      </div>
+      <input type="search" id="default-search"
+        class="block w-full p-4 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+        placeholder="What do you wanna read?">
+      <button type="submit"
+        class="text-white absolute right-2.5 bottom-2.5 bg-slate-700 hover:bg-slate-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-slate-800 dark:hover:bg-slate-900 dark:focus:ring-blue-800">Search</button>
+    </div>
+  </form>
+  <!-- End searchLayout -->
+
 
 </body>
 
@@ -481,8 +512,20 @@
     menuItem.classList.add('-right-full');
     menuItem.classList.remove('-right-48');
   }
+  // End Menuicon
 
-// End Menuicon
+  // Search Bar
+  const searchLayout = document.getElementById('searchLayout');
+  function openSearch() {
+    searchLayout.classList.remove('-top-full');
+    searchLayout.classList.add('top-0');
+  }
+
+  function closeSearch() {
+    searchLayout.classList.add('-top-full');
+    searchLayout.classList.remove('top-0');
+  }
+  // Search Bar
 </script>
 
 </html>
